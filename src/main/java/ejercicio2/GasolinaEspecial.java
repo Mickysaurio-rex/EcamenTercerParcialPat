@@ -14,9 +14,11 @@ public class GasolinaEspecial implements IGasolina {
 
     @Override
     public void estadoDelCombustible() {
-        int monto = (int) (Math.random() * (100 - 1)) + 1;
-        if()
-        System.out.println("La gasolina esta en: ");
-
+        int monto = (int) (Math.random() * (50 - 1)) + 1;
+        if(monto < capacidad) {
+            System.out.println("La gasolina esta en: " + monto);
+        }else{
+            estadoDelCombustible();
+        }
     }
 }
