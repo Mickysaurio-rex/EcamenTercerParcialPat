@@ -19,8 +19,7 @@ public class Servidor1 implements IServidor{
 
     @Override
     public void login(Usuario usuario) {
-        System.out.println("El servidor 1 esta atendiendo");
-        System.out.println("El servidor 2 esta logeando a este usuario");
+        System.out.println("El servidor 1 esta logeando a este usuario");
         listUsuario.add(usuario);
     }
 }

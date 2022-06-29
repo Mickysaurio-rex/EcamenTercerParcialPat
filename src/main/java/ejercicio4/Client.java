@@ -9,8 +9,8 @@ public class Client {
         proxy.registrar(new Usuario("Nestor", 3));
         proxy.registrar(new Usuario("Camila", 4));
 
-        proxy.login(new Usuario("Andres", 1));
-        proxy.login(new Usuario("Jose", 2));
-        proxy.login(new Usuario("Lila", 5));
+        proxy.login(new Usuario("Nestor", 3));
+        proxy.login(new Usuario("Camila", 4));
+
     }
 }

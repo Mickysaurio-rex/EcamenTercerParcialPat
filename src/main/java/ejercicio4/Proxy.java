@@ -22,16 +22,19 @@ public class Proxy implements IServidor{
 
     @Override
     public void login(Usuario usuario) {
-        if(listUsuario.contains(usuario)){
-            if(esPrimo(usuario.getNumero())){
-                servidor1.login(usuario);
-            }else{
-                servidor2.login(usuario);
+        for(Usuario usuario1: listUsuario){
+            if(usuario1.getNombre().equals(usuario.getNombre())){
+                if(usuario1.getNumero() == usuario.getNumero()){
+                    if(esPrimo(usuario.getNumero())){
+                        servidor1.login(usuario);
+                        break;
+                    }else{
+                        servidor2.login(usuario);
+                        break;
+                    }
+                }
             }
-        }else{
-            System.out.println("El usuario no existe, primero registrese");
         }
-
 
     }
 
