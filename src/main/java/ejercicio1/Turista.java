@@ -23,9 +23,10 @@ public class Turista implements IPersona{
     public void gastarDinero(LaPaz lapaz) {
         if(dinero > 0) {
             System.out.println("Dinero Actual: " + dinero);
-            double monto = (int) (Math.random() * (1 - 100)) + 1;
+            double monto = (int) (Math.random() * (100 - 1)) + 1;
             if(monto < dinero) {
-                setDinero(dinero - monto);
+                double nuevoDinero = dinero - monto;
+                setDinero(nuevoDinero);
                 lapaz.setDineroPorTurismo(lapaz.getDineroPorTurismo() + monto);
                 System.out.println("Dinero Despues de descuento: " + dinero);
             }else{
